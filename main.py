@@ -4,6 +4,14 @@ import schemas
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=['*'],
+    allow_credentials=True,
+    allow_methods=['*'],
+    allow_headers=['*']
+)
+
 host_name = "3.221.35.104"
 port_number = "8005"
 user_name = "root"
